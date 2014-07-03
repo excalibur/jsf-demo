@@ -10,24 +10,25 @@ import java.io.Serializable;
 @ManagedBean(name="message")
 @SessionScoped
 public class MessageBean implements Serializable {
-    private String name;
-    private double price;
     private int num;
+    private String response;
+    private int inputNum;
 
-    public String getName() {
-        return name;
+    public MessageBean() {
+        num = 6;
+        System.out.println("-------------");
+
+
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
+    public String check() {
+        System.out.println("--------check-----");
+        if (num == inputNum) {
+            response = "猜中了";
+        } else {
+            response = "错误了";
+        }
+        return "result";
     }
 
     public int getNum() {
@@ -36,5 +37,21 @@ public class MessageBean implements Serializable {
 
     public void setNum(int num) {
         this.num = num;
+    }
+
+    public String getResponse() {
+        return response;
+    }
+
+    public void setResponse(String response) {
+        this.response = response;
+    }
+
+    public int getInputNum() {
+        return inputNum;
+    }
+
+    public void setInputNum(int inputNum) {
+        this.inputNum = inputNum;
     }
 }
