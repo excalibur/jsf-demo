@@ -6,23 +6,27 @@
               version="2.0">
     
     <navigation-rule>
-        <from-view-id>/index2.xhtml</from-view-id>
-        
+        <from-view-id>/index.jsp</from-view-id>
+
         <navigation-case>
 
             <!--<from-action>out</from-action>-->
             <from-outcome>result</from-outcome>
-            <to-view-id>/out.xhtml</to-view-id>
+            <to-view-id>/out.jsp</to-view-id>
         </navigation-case>
 
         <navigation-case>
 
             <!--<from-action>out</from-action>-->
             <from-outcome>jsp</from-outcome>
-            <to-view-id>/ddd.jsp</to-view-id>
+            <to-view-id>/out.jsp</to-view-id>
         </navigation-case>
     </navigation-rule>
 
-
+<managed-bean>
+    <managed-bean-name>MessageBean</managed-bean-name>
+    <managed-bean-class>org.MessageBean</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+</managed-bean>
 
 </faces-config>

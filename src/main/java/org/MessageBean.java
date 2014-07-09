@@ -7,11 +7,10 @@ import java.io.Serializable;
 /**
  * Created by excalibur on 2014/7/2.
  */
-@ManagedBean(name="message")
-@SessionScoped
+
 public class MessageBean implements Serializable {
     private int num;
-    private String response;
+    private String response = null;
     private int inputNum;
 
     public MessageBean() {
