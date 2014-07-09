@@ -8,6 +8,9 @@
 </head>
 <body>
 <f:view>
+    <h:form>
+        <h:commandButton action="back" value="back"></h:commandButton>
+    </h:form>
    <h:outputLabel value="#{MessageBean.response}"></h:outputLabel>
 </f:view>
 </body>

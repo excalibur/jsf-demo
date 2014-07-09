@@ -23,6 +23,14 @@
         </navigation-case>
     </navigation-rule>
 
+
+    <navigation-rule>
+        <from-view-id>/out.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>back</from-outcome>
+            <to-view-id>/index.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 <managed-bean>
     <managed-bean-name>MessageBean</managed-bean-name>
     <managed-bean-class>org.MessageBean</managed-bean-class>
